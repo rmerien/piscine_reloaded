@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_alphabet.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rmerien <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: rmerien <rmerien@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/08/27 15:19:39 by rmerien           #+#    #+#             */
-/*   Updated: 2018/08/27 15:23:11 by rmerien          ###   ########.fr       */
+/*   Created: 2018/09/04 00:47:33 by rmerien           #+#    #+#             */
+/*   Updated: 2018/09/04 00:47:46 by rmerien          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,5 +18,5 @@ void	ft_print_alphabet(void)
 
 	c = 96;
 	while (++c < 123)
-		write(1, &c, 1);
+		ft_putchar(c);
 }
