@@ -6,22 +6,58 @@
 /*   By: rmerien <rmerien@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/04 01:01:17 by rmerien           #+#    #+#             */
-/*   Updated: 2018/09/04 01:01:18 by rmerien          ###   ########.fr       */
+/*   Updated: 2018/09/04 01:36:43 by rmerien          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+void	ft_putchar(char c);
 
 void	ft_swap(char *a, char *b)
 {
 	char tmp;
 
 	tmp = *a;
-	*a = b;
-	*b = tmp
+	*a = *b;
+	*b = tmp;
+}
 
-int		main(int ac, char **av)
+int		ft_strcmp(char *s1, char *s2)
+{
+	while (*s1++ == *s2++ && *s1);
+	return (*s1 - *s2);
+}
+
+void	ft_print_params(char	**av)
 {
 	int		i;
 
-	i = 1;
-	while (*av[i])
+	i = 0;
+	while (av[++i])
 	{
+		while(*av[i])
+			ft_putchar(*av[i]++);
+		ft_putchar('\n');
+	}
+}
+
+void	ft_sort_params(char	**av)
+{
+	unsigned int	i;
+	int				y;
+
+	i = 0;
+	y = 1;
+	while (*av[++i])
+	{
+		while(y)
+			ft_strcmp(av[i], av[i + 1]) < 0 ? ft_swap(av[i], av[i + 1]), y = 0 : (y = 0);
+	}
+}
+
+int		main(int ac, char **av)
+{
+	(void)	ac;
+	ft_sort_params(av);
+	ft_print_params(av);
+	return (0);
+}
