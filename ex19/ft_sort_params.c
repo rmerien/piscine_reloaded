@@ -6,9 +6,11 @@
 /*   By: rmerien <rmerien@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/04 01:01:17 by rmerien           #+#    #+#             */
-/*   Updated: 2018/09/04 01:36:43 by rmerien          ###   ########.fr       */
+/*   Updated: 2018/09/05 17:18:34 by rmerien          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <stdio.h>
 
 void	ft_putchar(char c);
 
@@ -50,14 +52,17 @@ void	ft_sort_params(char	**av)
 	while (*av[++i])
 	{
 		while(y)
-			ft_strcmp(av[i], av[i + 1]) < 0 ? ft_swap(av[i], av[i + 1]), y = 0 : (y = 0);
+		{
+			printf("%d\n\n\n\n\n\n", ft_strcmp(av[i], av[i + 1]));
+			ft_strcmp(av[i], av[i + 1]) < 0 ? ft_swap(av[i], av[i + 1]), y = 0 : (y = 1);
+		}
 	}
 }
 
 int		main(int ac, char **av)
 {
-	(void)	ac;
-	ft_sort_params(av);
+	if (ac > 1)
+		ft_sort_params(av);
 	ft_print_params(av);
 	return (0);
 }
