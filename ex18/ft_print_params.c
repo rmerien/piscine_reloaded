@@ -6,13 +6,18 @@
 /*   By: rmerien <rmerien@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/04 01:00:51 by rmerien           #+#    #+#             */
-/*   Updated: 2018/09/04 01:32:53 by rmerien          ###   ########.fr       */
+/*   Updated: 2018/09/17 18:21:10 by rmerien          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_putchar(char c);
+#include <unistd.h>
 
-void	ft_print_params(char	**av)
+void	ft_putchar(char c)
+{
+    write(1, &c, 1);
+}
+
+void	ft_print_params(char **av)
 {
 	int		i;
 

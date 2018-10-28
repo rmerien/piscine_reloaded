@@ -1,18 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_is_negative.c                                   :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rmerien <rmerien@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/09/04 00:54:59 by rmerien           #+#    #+#             */
-/*   Updated: 2018/09/17 14:46:37 by rmerien          ###   ########.fr       */
+/*   Created: 2018/10/28 14:31:15 by rmerien           #+#    #+#             */
+/*   Updated: 2018/10/28 14:34:31 by rmerien          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_putchar(char c);
-
-void	ft_is_negative(int n)
+char	*ft_strdup(char *src)
 {
-	(n < 0) ? ft_putchar('N') : ft_putchar('P');
+	char	*dest;
+
+	if (!(dest = (char*)malloc(sizeof(char) * (ft_strlen(src) + 1))))a
+		return (0);
+	while (*src)
+		*dest = *src++;
+	*dest = *src++;
+	return (dest);
 }
