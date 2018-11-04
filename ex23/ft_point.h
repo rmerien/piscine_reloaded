@@ -1,17 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   ft_point.h                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rmerien <rmerien@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/09/04 00:59:50 by rmerien           #+#    #+#             */
-/*   Updated: 2018/10/29 01:14:48 by rmerien          ###   ########.fr       */
+/*   Created: 2018/10/28 14:42:29 by rmerien           #+#    #+#             */
+/*   Updated: 2018/10/28 14:46:43 by rmerien          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_strcmp(char *s1, char *s2)
+#ifndef FT_POINT_H
+# define FT_POINT_H
+
+typedef struct		s_point
 {
-	while (*s1++ == *s2++ && *s1)
-		return (!*s1(*s1 - *s2);
-}
+	int x;
+	int y;
+}					t_point;
+
+#endif

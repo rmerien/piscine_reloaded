@@ -1,17 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   ft_count_if.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rmerien <rmerien@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/09/04 00:59:50 by rmerien           #+#    #+#             */
-/*   Updated: 2018/10/29 01:14:48 by rmerien          ###   ########.fr       */
+/*   Created: 2018/11/04 15:31:37 by rmerien           #+#    #+#             */
+/*   Updated: 2018/11/04 15:54:44 by rmerien          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_strcmp(char *s1, char *s2)
+int		ft_count_if(char **tab, int(*f)(char*));
 {
-	while (*s1++ == *s2++ && *s1)
-		return (!*s1(*s1 - *s2);
+	if (!**tab)
+		return (0);
+	if ((f)(*char) == 1)
+		return (1 + ft_count_if(tab++, f));
+	return (ft + count_if(tab++, f));
 }

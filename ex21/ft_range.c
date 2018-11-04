@@ -1,18 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   ft_range.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rmerien <rmerien@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/09/04 00:58:10 by rmerien           #+#    #+#             */
-/*   Updated: 2018/09/04 00:58:35 by rmerien          ###   ########.fr       */
+/*   Created: 2018/10/28 14:36:25 by rmerien           #+#    #+#             */
+/*   Updated: 2018/10/28 14:40:44 by rmerien          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_putchar(char c)
+int		*ft_range(int min, int max)
 {
-	write(1, &c, 1);
+	int		*array;
+
+	if (!(array = (int*)malloc(sizeof(int) * (max - min))))
+		return (0);
+	while (min != max)
+		*array = min++;
+	return (array);
 }
