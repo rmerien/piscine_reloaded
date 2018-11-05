@@ -6,15 +6,19 @@
 /*   By: rmerien <rmerien@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/04 15:31:37 by rmerien           #+#    #+#             */
-/*   Updated: 2018/11/04 15:54:44 by rmerien          ###   ########.fr       */
+/*   Updated: 2018/11/05 17:10:33 by rmerien          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int		ft_count_if(char **tab, int(*f)(char*));
 {
-	if (!**tab)
-		return (0);
-	if ((f)(*char) == 1)
-		return (1 + ft_count_if(tab++, f));
-	return (ft + count_if(tab++, f));
+	int i;
+	int count;
+
+	i = -1;
+	count = 0;
+	while (tab[++i])
+		if (f(tab[i]) == 1)
+			count++;
+	return (count);
 }
